@@ -1,0 +1,24 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^get/$ wp-content/themes/Assertia/get/index.php [L]
+RewriteRule ^page/(.*?)/\?(.*?)$ index\.php?$2&page=$1 [L]
+RewriteRule ^category/(.*?)/(.*?)/$ index\.php?cat=$1&letter=$2 [L]
+RewriteRule ^en/category/(.*?)/(.*?)/$ index\.php?cat=$1&letter=$2 [L]
+RewriteRule ^category/(.*?)/$ index\.php?cat=$1 [L]
+RewriteRule ^en/category/(.*?)/$ index\.php?cat=$1 [L]
+RewriteRule ^img/(.*?)/(.*?)/(.*?)/(.*\.*?)$ wp-content/themes/Assertia/get/index.php?acao=img&tipo=$1&arq=$4&w=$2&h=$3 [L]
+RewriteRule ^img/(.*?)/(.*\.*?)$ wp-content/themes/Assertia/get/index.php?acao=img&tipo=$1&arq=$2 [L]
+RewriteRule ^img/(.*\.*?)$ wp-content/themes/Assertia/static/img/$1 [L]
+RewriteRule ^vcf/(.*\.*?)$ wp-content/themes/Assertia/static/vcf/$1 [L]
+RewriteRule ^fonts/(.*\.*?)$ wp-content/themes/Assertia/static/fonts/$1 [L]
+RewriteRule ^js/$ wp-content/themes/Assertia/get/index.php?acao=js&lng=$1 [L]
+RewriteRule ^css/$ wp-content/themes/Assertia/get/index.php?acao=css [L]
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

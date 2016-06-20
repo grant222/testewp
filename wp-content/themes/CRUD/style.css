@@ -1,0 +1,239 @@
+/*
+Theme Name: CRUD - teste WP Altran
+Theme URI: http://devops.acheaquiimovel.com.br
+Author: Fernando Valeriano de Menezes
+Author URI: http://devops.acheaquiimovel.com.br
+Description: CRUD com Custom Post Types e Custom fields
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: ACF, CPT
+This theme, like WordPress, is licensed under the GPL.
+*/
+body {
+  font-family: "Asap",sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #222;
+  background-color: #e6e6e6;
+  margin: 0;
+  padding: 0; }
+
+header {
+  margin: 10px 0 10px 0; }
+
+.logo-top {
+  margin: 30px 0; }
+
+.social-top {
+  margin: 30px 0; }
+  .social-top a {
+    color: #fff;
+    font-size: 23px; }
+    .social-top a:hover {
+      text-decoration: none; }
+
+.top-menu {
+  height: 110px;
+  background: #e6e6e6;
+  margin: 0 0 10px 0;
+  width: 100%;
+  position: fixed; }
+
+.container-master {
+  width: 1320px;
+  margin: 30px auto; }
+
+/*replace default width of bootstrap*/
+.container {
+  width: 1320px; }
+
+.row-no-padding [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+/*remove default pad and margin from bootstrap col-* */
+.menubar {
+  background-color: #ed1c24;
+  /* margin-top: 30px; */
+  width: 100%;
+  float: left;
+  height: 100px;
+  /* clear: both; */
+  position: relative;
+  margin: 0;
+  padding: 0px; }
+
+.navbar.navbar-default {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+.navbar-default .navbar-nav > li:hover {
+  background-color: #242424; }
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font: 700 14px "Dosis",Sans-serif;
+  text-transform: uppercase;
+  display: block;
+  padding: 35px 22px 30px 12px;
+  position: relative; }
+
+.search form {
+  float: left;
+  background: white;
+  width: 145px;
+  height: 33px;
+  margin: 25px 15px; }
+  .search form input {
+    border: 0;
+    height: 33px;
+    padding-left: 6px; }
+
+.fa.fa-search {
+  position: absolute;
+  right: -60px;
+  top: 34px; }
+
+.menu-bottom {
+  background-color: #000;
+  margin: 0;
+  padding: 5px; }
+  .menu-bottom a {
+    font: 700 14px "Dosis",Sans-serif;
+    color: #fff;
+    line-height: 1.7;
+    text-transform: uppercase;
+    font-weight: 700; }
+
+/*end nav*/
+.top-destaques li {
+  margin: 0;
+  padding: 0;
+  float: left; }
+.top-destaques a {
+  display: block;
+  position: relative; }
+  .top-destaques a h3, .top-destaques a h4 {
+    position: absolute;
+    text-transform: uppercase;
+    font: 600 Dosis;
+    color: #fff;
+    font-size: 90%;
+    padding: 10px; }
+  .top-destaques a h3 {
+    bottom: 10px;
+    font: 600 32px Dosis; }
+  .top-destaques a h4 {
+    top: 10px;
+    font: 600 14px Dosis;
+    text-indent: 23px; }
+    .top-destaques a h4:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      width: 14px;
+      height: 14px;
+      background-color: #ed1c24;
+      border-radius: 2px;
+      padding: 5px; }
+
+.reset-col {
+  margin: 0;
+  padding: 0; }
+
+.bottom-destaques li {
+  float: left;
+  width: 322px;
+  margin-top: 30px;
+  padding: 0; }
+.bottom-destaques img {
+  height: 200px;
+  width: 310px; }
+.bottom-destaques a {
+  display: block;
+  position: relative; }
+  .bottom-destaques a h3, .bottom-destaques a h4, .bottom-destaques a p {
+    position: absolute;
+    text-transform: uppercase;
+    color: #000;
+    padding: 10px; }
+  .bottom-destaques a h3 {
+    bottom: 10px;
+    font: 600 21px Dosis !important; }
+  .bottom-destaques a h4 {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    background-color: #ed1c24;
+    border-radius: 2px;
+    padding: 5px;
+    top: 11px;
+    left: 15px; }
+    .bottom-destaques a h4:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      width: 14px;
+      height: 14px;
+      background-color: #ed1c24;
+      border-radius: 2px;
+      padding: 5px; }
+
+.bottom-list-up {
+  margin-top: 10px; }
+
+.small-destaque {
+  font: 600 20px "Dosis" !important;
+  text-transform: none !important; }
+
+.row-no-padding > [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.navbar-default .navbar-nav > li > a {
+  padding: 52px 22px 30px 12px; }
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+  color: #fff !important;
+  background-color: #000 !important; }
+
+.img-destaque-menor {
+  width: 339px;
+  height: 248px; }
+
+.id-ped {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000; }
+
+.crud ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  margin: 0; }
+  .crud ul li {
+    text-decoration: none;
+    background-color: rgba(51, 134, 183, 0.11);
+    color: #282828;
+    font-size: 16px;
+    padding: 30px;
+    box-shadow: 10px 10px 5px #888888; }
+
+.fgp {
+  height: 860px; }
+
+.dest1 {
+  width: 99.8%;
+  margin-left: 6px;
+  height: 496px; }
+
+.modelos-az {
+  float: right; }
+
+/*# sourceMappingURL=style.css.map */
